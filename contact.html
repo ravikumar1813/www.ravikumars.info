@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+</head>
+<body>
+<header style="background-color: #101010; height: 80px;width:100%">
+    <img src="https://i.pinimg.com/564x/59/fe/45/59fe454f3bd7886b19db04ff0a288afe.jpg"width="1510" height="1900">
+	<h1 style="font-size: 30px; color: white;text-align: center; padding-top: 15px;"></h1>
+   </header>
+<form action="/contact">
+    {% csrf_token %}
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" class="name" id="name" placeholder="Input your Name">
+  </div>
+  <div class="form-group">
+    <label for="mnumber">Mobile Number</label>
+    <input type="text" class="mnumber" id="mnumber" placeholder="Input your Mobile Number">
+  </div>
+    <div class="form-group">
+    <label for="email">E-Mail</label>
+    <input type="text" class="email" id="email" placeholder="Your E-Mail ID">
+  </div>
+  <div class="form-group">
+    <label for="feedback">Feedback</label>
+    <input type="text" class="feedback" id="feedback" placeholder="Input your Feedbaack"><br>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
+</body>
+</html>
+
+{% endblock %}
